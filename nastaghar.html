@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/js/all.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/js/brands.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/js/conflict-detection.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/js/fontawesome.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/js/regular.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/js/solid.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/js/v4-shims.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css">
+    <link rel="shortcut icon" href="logo.png" type="image/x-icon">
+    <link rel="stylesheet" href="nastaghar.css">
+    <title>Nasta Ghar</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&family=Poppins:wght@200;400&family=Roboto:wght@300;400;700&display=swap');
+*{
+    margin: 0;
+    font-family: 'Poppins';
+}
+body{
+    background: #000;
+}
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.nav {
+    position: fixed;
+    background-color: rgb(245, 11, 11);
+    top: 0;
+    left: 0;
+    right: 0;
+    transition: all .3s ease-in-out;
+}
+
+.nav .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    transition: all .3s ease-in-out;
+}
+
+.nav ul {
+    display: flex;
+    list-style: none;
+    align-items: center;
+    justify-content: center;
+}
+li{
+    padding: 10px;
+}
+
+.nav a {
+    color: #fff;
+    text-decoration: none;
+    padding: 7px 15px;
+    transition: all .3s ease-in-out;
+}
+.container img{
+    width: 15%;
+}
+.nav.active {
+    background-color: #fff;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, .3);
+}
+
+.nav.active a {
+    color: #000;
+}
+
+.nav.active .container {
+    padding: 10px 0;
+}
+
+li a.current, li a:hover {
+    color: #fff;
+    font-weight: bold;
+    background: #000;
+}
+#preloader{
+    background:rgb(255, 255, 255) url(logo.png) no-repeat center;
+    color: crimson;
+    height: 100vh;
+    width: 100%;
+    position: fixed;
+    z-index: 100;
+}
+.contain{
+    background-color: #000;
+    color: crimson;
+    height: 70vh;
+    margin-top: 20vh;
+   
+}
+.contain img{
+    width: 50%;
+    display: block;
+    padding: 90px;
+    transition: ease-in-out;
+    float: right;
+}
+.image-box{
+    background: #fff;
+    height: 20vh;
+}
+.container-2{
+    background: #fff;
+    color: #000;
+    height: 70vh;
+    width: 30%;
+    margin: 20px 10px 10px 10px;
+    display: flexbox;
+    overflow: scroll;
+}
+.container-2 p{
+    text-align: center;
+    font-weight: 400;
+    font-size: 20px;
+}
+.container-2 a{
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+    text-decoration: none;
+    color: #000;
+    font-size: 10px;
+}
+.container-2 a:hover{
+    background: crimson;
+    
+
+}
+.search-bar input{
+    outline: none;
+    border: none;
+    width: 260px;
+    height: 5vh;
+    text-align: center;
+}
+.search-bar{
+    display: flex;
+}
+.search-btn a{
+    background-color: crimson;
+    width: 60%;
+    font-size: 20px;
+    padding: 9px 9px 9px 9px;
+    float: right;
+    margin-bottom: 50px;
+}
+
+.row{
+	display: flex;
+	flex-wrap: wrap;
+}
+ul{
+	list-style: none;
+}
+.footer{
+	background-color:rgb(245, 11, 11) ;
+    padding: 70px 0;
+    font-family: 'Poppins';
+    height: 60vh;
+}
+.footer-col{
+   width: 25%;
+   padding: 0 15px;
+}
+.footer-col h4{
+	font-size: 18px;
+	color: #000;
+	text-transform: capitalize;
+	margin-bottom: 35px;
+	font-weight: 500;
+	position: relative;
+}
+.footer-col h4::before{
+	content: '';
+	position: absolute;
+	left:0;
+	bottom: -10px;
+	background-color:#000;
+	height: 2px;
+	box-sizing: border-box;
+	width: 50px;
+}
+.footer-col ul li:not(:last-child){
+	margin-bottom: 10px;
+}
+.footer-col ul li a{
+	font-size: 16px;
+	text-transform: capitalize;
+	color: #ffffff;
+	text-decoration: none;
+	font-weight: 300;
+	color: #000;
+	display: block;
+	transition: all 0.3s ease;
+}
+.footer-col ul li a:hover{
+	color: #ffffff;
+	padding-left: 8px;
+    background-color: transparent;
+}
+.footer-col .social-links a{
+	display: inline-block;
+	height: 40px;
+	width: 40px;
+	background-color: rgba(255,255,255,0.2);
+	margin:0 10px 10px 0;
+	text-align: center;
+	line-height: 40px;
+	border-radius: 50%;
+	color: #ffffff;
+	transition: all 0.5s ease;
+}
+.footer-col .social-links a:hover{
+	color: #24262b;
+	background-color: #ffffff;
+}
+.copyright{
+    font-size: 17px;
+    font-weight: 500;
+    text-align: center;
+}
+/*responsive*/
+@media(max-width: 767px){
+  .footer-col{
+    width: 50%;
+    margin-bottom: 30px;
+}
+}
+@media(max-width: 574px){
+  .footer-col{
+    width: 100%;
+}
+}
+
+    </style>
+</head>
+<body>
+    <div id="preloader">
+    </div>
+    <nav class="nav">
+        <div class="container">
+            <h1 class="logo"><a href="nastaghar.html">
+                <img src="logo.png">
+            </a></h1>
+            <ul>
+                <li><a href="nastaghar.html" class="current">Home</a></li>
+                <li><a href="#">Veg</a></li>
+                <li><a href="#">Non-Veg</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </div>
+    </nav> 
+    </div>
+
+ <div class="contain">
+    <div class="imag-box">
+        <img src="quost.png">
+    </div>
+    <div class="container-2">
+    
+     <p>Contain</p>  
+      <div class="search-bar">
+            <input type="text" placeholder="Hungry?Search for Food!">
+            <div class="search-btn">
+                <a href=""><i class="fa-solid fa-magnifying-glass"></i></a>
+            </div>
+        </div>
+     <a href="">Momo</a>
+     <a href="">Chowmine</a>
+     <a href="">Sekwa</a>
+     <a href="">Burger</a>
+     <a href="">Chicken products</a>
+     <a href="">Desert</a>
+     <a href="">juice</a>
+    </div>
+ </div>
+
+ <script>
+
+  var loader = document.getElementById("preloader")
+  window.addEventListener("load", function(){
+    loader.style.display ="none"
+  })
+
+ </script>
+ <footer class="footer">
+    <div class="row">
+        <div class="footer-col">
+            <h4>company</h4>
+            <ul>
+                <li><a href="#">about us</a></li>
+                <li><a href="#">our services</a></li>
+                <li><a href="#">privacy policy</a></li>
+                <li><a href="#">affiliate program</a></li>
+            </ul>
+        </div>
+        <div class="footer-col">
+            <h4>get help</h4>
+            <ul>
+                <li><a href="#">FAQ</a></li>
+                <li><a href="#">shipping</a></li>
+                <li><a href="#">returns</a></li>
+                <li><a href="#">order status</a></li>
+                <li><a href="#">payment options</a></li>
+            </ul>
+        </div>
+        <div class="footer-col">
+            <h4>online shop</h4>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Veg</a></li>
+                <li><a href="#">Non-Veg</a></li>
+                
+            </ul>
+        </div>
+        <div class="footer-col">
+            <h4>follow us</h4>
+            <div class="social-links">
+                <a href="#"><i class="fab fa-facebook-f"></i></a>
+                <a href="#"><i class="fab fa-twitter"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+                <a href="#"><i class="fab fa-linkedin-in"></i></a>
+            </div>
+        </div>
+    </div>
+    <div class="copyright">
+        2022 © nastaghar.com 
+        developed by Reshuk
+    </div>
+ </footer>
+</body>
+</html>
